@@ -21,7 +21,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 sudo usermod -aG docker `whoami`
 sudo systemctl start docker
-sudo docker-compose.yml up -d
+docker-compose.yml up -d
 sudo docker exec -it wordpress bash
 echo "deb http://deb.debian.org/debian stretch-backports main" >> /etc/apt/sources.list
 apt update
