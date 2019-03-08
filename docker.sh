@@ -23,3 +23,7 @@ sudo usermod -aG docker `whoami`
 sudo systemctl start docker
 sudo docker-compose.yml up -d
 sudo docker exec -it wordpress bash
+echo "deb http://deb.debian.org/debian stretch-backports main" >> /etc/apt/sources.list
+apt update
+apt-get install certbot python-certbot-apache -t stretch-backports
+certbot --apache
